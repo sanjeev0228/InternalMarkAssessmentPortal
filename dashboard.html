@@ -1,0 +1,102 @@
+<!-- html5 Declaration -->
+<!DOCTYPE>
+<html>
+<head>
+<!-- All Meta tags -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+<!-- Bootstrap CSS and other CSS files-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Bootstrap JS and other JS files-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+<!--title tag-->
+<title></title>
+
+</head>
+<body>
+<!-- Page Header start-->
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center"><h1> ABES Engineering College</h1></div>
+</div>
+<!--start navbar-->
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<a href= "#" class="navbar-brand"><img src="img/logo2.png" height="50" width="150"></a>
+  <a href="#" class="navbar-brand text-black">DataRitz Technology</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <a href="#" class="navbar-brand text-Primary">Welcome, <?php echo $row[0]; ?></a>
+  
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#m">
+  <span class="navbar-toggler-icon"></span>
+  
+  </button>
+  <div id="m" class="collapse navbar-collapse">
+  <ul class="navbar-nav ml-auto">
+     <li class="nav-item"><a href="FacultyDashboard.php" class="nav-link">Home &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+	 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown">Profile</a>
+	 <ul class="dropdown-menu">
+	      <li><a href="#" class="dropdown-item text-info" >Show Profile</a> </li>
+		  <li><a href="editprofile.php?e=<?php echo $email; ?>" class="dropdown-item text-info" >Edit Profile</a> </li>
+		   	 
+	  </ul>	 
+	 
+	 
+	 </li>
+	 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
+	 <!-- desinging dropdown start-->
+	  <ul class="dropdown-menu">
+	      <li><a href="showst.php" class="dropdown-item text-info" >Show Student</a> </li>
+		   <li><a href="#" class="dropdown-item text-info">Delete Student</a> </li>
+		    <li><a href="#" class="dropdown-item text-info">Update Student</a> </li>	 
+	  </ul>	 
+	 <!-- dropdown end-->
+	 </li>
+	 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown">Attendance</a>
+	 
+	 <!-- desinging dropdown start-->
+	  <ul class="dropdown-menu">
+	      <li><a href="#" class="dropdown-item" >Mark Attendance</a> </li>
+		   <li><a href="#" class="dropdown-item">Delete Attendance</a> </li>
+		    <li><a href="#" class="dropdown-item">Update Attendance</a> </li>	 
+	  </ul>	 
+	 <!-- dropdown end-->
+	 
+	 
+	 
+	 </li>
+	 <li class="nav-item"><a class="nav-link">Change Password&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+	 <li class="nav-item"><a href="logout.php" class="nav-link">Logout&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  </ul>
+  </div>
+</nav>
+</div>
+<!-- Page Header end-->
+<!-- Page content start -->
+<div class="container" style="margin-top:100px">
+  <div class="row">
+     <div class="col-md-12">
+	       <div class="table-responsive">
+	      <table class="table">
+		   <tr><td><b>Name:</b><?php echo $row[0];?></td><td><b>E-Mail Id:</b><?php echo $row[1];?></td><td></td></tr>
+		   <tr><td><b> Mob No:</b><?php echo $row[2];?></td><td><b>Address:</b><?php echo $row[3];?></td><td></td></tr>
+             <tr><td><b> Course1:</b><?php echo $row[4];?></td><td><b>Course2:</b><?php echo $row[5];?></td><td><b>Course3:</b><?php echo $row[6];?></td></tr>    
+              <tr><td><b> Gender:</b><?php echo $row[7];?></td><td><b>State:</b><?php echo $row[8];?></td><td><b>Pin:</b><?php echo $row[9];?></td></tr>
+	      </table>
+	       </div>
+	 </div>
+	 
+  </div>
+</div>
+
+
+<!-- Page contents end-->
+<!-- All script code start -->
+
+
+</body>
+</html>
